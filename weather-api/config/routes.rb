@@ -10,9 +10,9 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :weather do
+      resources :weathers do
         collection do
-          get '/search', to: 'weather#search'
+          get '/search', to: 'weathers#search'
         end
       end
     end

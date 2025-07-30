@@ -1,11 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe WeatherService::Finder, type: :service do
-  # let!(:cached_forecast) { 
-  #   Rails.cache.write('zip-code-test_zip_code', { data: 'test_wather_data' }) 
-  # }
-  # let(:forecast) { WeatherService::Finder.find_forecast({ zip_code: 'test_zip_code' }) }
-
   describe 'find forecast' do
     context 'when data is cached already' do
       before do
@@ -21,15 +16,27 @@ RSpec.describe WeatherService::Finder, type: :service do
     end
 
     context 'when data is not cached but stored in db' do
-      let(:saved_weather) { create(:weather, zip_code: 'xyz') }
+      let!(:saved_weather) { create(:weather, zip_code: 'xyz') }
 
       before do
         Rails.cache.clear
       end
       subject { WeatherService::Finder.find_forecast({ zip_code: 'xyz' }) }
       it 'looks forecast data into db after cache lookup' do
-        puts "--- forecast #{subject}"
-        puts "--- stored weather #{saved_weather.inspect}"
+        # puts "--- forecast #{subject}"
+        # puts "--- stored weather #{saved_weather.inspect}"
+        expect(subject).not_to be(nil)
+      end
+    end
+
+    context 'when forecast data not present in both cache and db' do
+      before do
+        Rails.cache.clear
+      end
+      subject { WeatherService::Finder.find_forecast({ zip_code: 'xyz' }) }
+      it 'searches through weather api and creates a new entry if found' do
+        # We can set up a mock api server to fetch mock weather data and test
+        # In that case we need to define separate API_KEY_DEV/TEST and BASE_URL_DEV/TEST
       end
     end
   end
