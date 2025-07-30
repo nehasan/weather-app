@@ -9,14 +9,14 @@ RSpec.describe "Weathers", type: :request do
     end
   end
 
-  describe 'GET /search' do
+  describe 'POST /search' do
     let!(:saved_weather) {
       create(:weather)
     }
 
     context 'when address does not have the zip code' do
       it 'returns an error saying zip code required' do
-        get search_api_v1_weathers_path, params: {
+        post search_api_v1_weathers_path, params: {
           address: {
             city: 'xyz_city',
             state: 'xyz_state',
@@ -34,7 +34,7 @@ RSpec.describe "Weathers", type: :request do
 
     context 'when the search params has the zip code' do
       it 'returns forecast based on given address' do
-        get search_api_v1_weathers_path, params: {
+        post search_api_v1_weathers_path, params: {
           address: {
             city: 'xyz_city',
             state: 'xyz_state',

@@ -1108,3 +1108,225 @@ Completed 200 OK in 34ms (Views: 27.1ms | ActiveRecord: 4.5ms (1 query, 0 cached
   [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(5394505234747889295)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/v1/weathers/search?address=%5Bobject+Object%5D" for 192.168.65.1 at 2025-07-30 18:16:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::WeathersController#search as */*
+  Parameters: {"address"=>"[object Object]"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for "[object Object]":String):
+  
+app/controllers/api/v1/weathers_controller.rb:27:in `weather_params'
+app/controllers/api/v1/weathers_controller.rb:10:in `search'
+Started GET "/api/v1/weathers/search?address=%7B%22line%22%3A%22%22%2C%22city%22%3A%22%22%2C%22state%22%3A%22%22%2C%22zip_code%22%3A%22L1J+7S2%22%2C%22country%22%3A%22%22%7D" for 192.168.65.1 at 2025-07-30 18:33:16 +0000
+Processing by Api::V1::WeathersController#search as */*
+  Parameters: {"address"=>"{\"line\":\"\",\"city\":\"\",\"state\":\"\",\"zip_code\":\"L1J 7S2\",\"country\":\"\"}"}
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for "{\"line\":\"\",\"city\":\"\",\"state\":\"\",\"zip_code\":\"L1J 7S2\",\"country\":\"\"}":String):
+  
+app/controllers/api/v1/weathers_controller.rb:27:in `weather_params'
+app/controllers/api/v1/weathers_controller.rb:10:in `search'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5394505234747889295)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5394505234747889295)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/v1/weathers/search?address=%7B%22line%22%3A%22%22%2C%22city%22%3A%22%22%2C%22state%22%3A%22%22%2C%22zip_code%22%3A%22L1J+7S2%22%2C%22country%22%3A%22%22%7D" for 192.168.65.1 at 2025-07-30 18:40:34 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::WeathersController#search as */*
+  Parameters: {"address"=>"{\"line\":\"\",\"city\":\"\",\"state\":\"\",\"zip_code\":\"L1J 7S2\",\"country\":\"\"}"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 2.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for "{\"line\":\"\",\"city\":\"\",\"state\":\"\",\"zip_code\":\"L1J 7S2\",\"country\":\"\"}":String):
+  
+app/controllers/api/v1/weathers_controller.rb:27:in `weather_params'
+app/controllers/api/v1/weathers_controller.rb:10:in `search'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5394505234747889295)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5394505234747889295)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/v1/weathers/search?address=%7B%22line%22%3A%22%22%2C%22city%22%3A%22%22%2C%22state%22%3A%22%22%2C%22zip_code%22%3A%22L1J+7S2%22%2C%22country%22%3A%22%22%7D" for 192.168.65.1 at 2025-07-30 18:41:57 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::WeathersController#search as */*
+  Parameters: {"address"=>"{\"line\":\"\",\"city\":\"\",\"state\":\"\",\"zip_code\":\"L1J 7S2\",\"country\":\"\"}"}
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 5.6ms)
+
+
+  
+NoMethodError (undefined method `permit' for "{\"line\":\"\",\"city\":\"\",\"state\":\"\",\"zip_code\":\"L1J 7S2\",\"country\":\"\"}":String):
+  
+app/controllers/api/v1/weathers_controller.rb:27:in `weather_params'
+app/controllers/api/v1/weathers_controller.rb:10:in `search'
+Started GET "/api/v1/weathers/search?address=%7B%22line%22%3A%22%22%2C%22city%22%3A%22%22%2C%22state%22%3A%22%22%2C%22zip_code%22%3A%22L1J+7S2%22%2C%22country%22%3A%22%22%7D" for 192.168.65.1 at 2025-07-30 18:43:05 +0000
+Processing by Api::V1::WeathersController#search as */*
+  Parameters: {"address"=>"{\"line\":\"\",\"city\":\"\",\"state\":\"\",\"zip_code\":\"L1J 7S2\",\"country\":\"\"}"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for "{\"line\":\"\",\"city\":\"\",\"state\":\"\",\"zip_code\":\"L1J 7S2\",\"country\":\"\"}":String):
+  
+app/controllers/api/v1/weathers_controller.rb:27:in `weather_params'
+app/controllers/api/v1/weathers_controller.rb:10:in `search'
+Started GET "/api/v1/weathers/search?address=%7B%22line%22%3A%22%22%2C%22city%22%3A%22%22%2C%22state%22%3A%22%22%2C%22zip_code%22%3A%22L1J+7S2%22%2C%22country%22%3A%22%22%7D" for 192.168.65.1 at 2025-07-30 18:45:27 +0000
+Processing by Api::V1::WeathersController#search as */*
+  Parameters: {"address"=>"{\"line\":\"\",\"city\":\"\",\"state\":\"\",\"zip_code\":\"L1J 7S2\",\"country\":\"\"}"}
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for "{\"line\":\"\",\"city\":\"\",\"state\":\"\",\"zip_code\":\"L1J 7S2\",\"country\":\"\"}":String):
+  
+app/controllers/api/v1/weathers_controller.rb:27:in `weather_params'
+app/controllers/api/v1/weathers_controller.rb:10:in `search'
+Started POST "/api/v1/weathers/search" for 192.168.65.1 at 2025-07-30 18:52:22 +0000
+Processing by Api::V1::WeathersController#search as */*
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: address):
+  
+app/controllers/api/v1/weathers_controller.rb:29:in `weather_params'
+app/controllers/api/v1/weathers_controller.rb:12:in `search'
+Started POST "/api/v1/weathers/search" for 192.168.65.1 at 2025-07-30 18:54:25 +0000
+Processing by Api::V1::WeathersController#search as */*
+Completed 400 Bad Request in 11ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: address):
+  
+app/controllers/api/v1/weathers_controller.rb:29:in `weather_params'
+app/controllers/api/v1/weathers_controller.rb:12:in `search'
+Started POST "/api/v1/weathers/search" for 192.168.65.1 at 2025-07-30 18:54:59 +0000
+Processing by Api::V1::WeathersController#search as */*
+Completed 400 Bad Request in 8ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: address):
+  
+app/controllers/api/v1/weathers_controller.rb:29:in `weather_params'
+app/controllers/api/v1/weathers_controller.rb:12:in `search'
+Started POST "/api/v1/weathers/search" for 192.168.65.1 at 2025-07-30 18:57:56 +0000
+Processing by Api::V1::WeathersController#search as */*
+Completed 400 Bad Request in 10ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: address):
+  
+app/controllers/api/v1/weathers_controller.rb:29:in `weather_params'
+app/controllers/api/v1/weathers_controller.rb:12:in `search'
+Started POST "/api/v1/weathers/search" for 192.168.65.1 at 2025-07-30 19:02:16 +0000
+Processing by Api::V1::WeathersController#search as */*
+  Parameters: {"line"=>"", "city"=>"", "state"=>"", "zip_code"=>"L", "country"=>"", "weather"=>{"zip_code"=>"L"}}
+Completed 400 Bad Request in 9ms (ActiveRecord: 1170.2ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: address):
+  
+app/controllers/api/v1/weathers_controller.rb:29:in `weather_params'
+app/controllers/api/v1/weathers_controller.rb:12:in `search'
+Started POST "/api/v1/weathers/search" for 192.168.65.1 at 2025-07-30 19:04:17 +0000
+Processing by Api::V1::WeathersController#search as */*
+  Parameters: {"address"=>{"line"=>"", "city"=>"", "state"=>"", "zip_code"=>"L", "country"=>""}, "weather"=>{}}
+  [1m[36mWeather Load (12.8ms)[0m  [1m[34mSELECT "weathers".* FROM "weathers" WHERE "weathers"."zip_code" = $1 AND "weathers"."day" = $2 LIMIT $3[0m  [["zip_code", "L"], ["day", "2025-07-30"], ["LIMIT", 1]]
+  ↳ app/services/weather_service/finder.rb:21:in `fetch_db'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/concerns/weather_concern.rb:8:in `create'
+  [1m[36mWeather Create (33.0ms)[0m  [1m[32mINSERT INTO "weathers" ("zip_code", "day", "data", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["zip_code", "L"], ["day", "2025-07-30"], ["data", "{\"location\"=>{\"name\"=>\"Lagos\", \"region\"=>\"Lagos\", \"country\"=>\"Nigeria\", \"lat\"=>6.4531, \"lon\"=>3.3958, \"tz_id\"=>\"Africa/Lagos\", \"localtime_epoch\"=>1753902812, \"localtime\"=>\"2025-07-30 20:13\"}, \"current\"=>{\"last_updated_epoch\"=>1753902000, \"last_updated\"=>\"2025-07-30 20:00\", \"temp_c\"=>26.4, \"temp_f\"=>79.5, \"is_day\"=>0, \"condition\"=>{\"text\"=>\"Partly cloudy\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/night/116.png\", \"code\"=>1003}, \"wind_mph\"=>13.6, \"wind_kph\"=>22.0, \"wind_degree\"=>227, \"wind_dir\"=>\"SW\", \"pressure_mb\"=>1015.0, \"pressure_in\"=>29.97, \"precip_mm\"=>0.09, \"precip_in\"=>0.0, \"humidity\"=>84, \"cloud\"=>50, \"feelslike_c\"=>29.4, \"feelslike_f\"=>84.8, \"windchill_c\"=>25.2, \"windchill_f\"=>77.3, \"heatindex_c\"=>27.4, \"heatindex_f\"=>81.3, \"dewpoint_c\"=>21.8, \"dewpoint_f\"=>71.2, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"uv\"=>0.0, \"gust_mph\"=>17.7, \"gust_kph\"=>28.5}, \"forecast\"=>{\"forecastday\"=>[{\"date\"=>\"2025-07-30\", \"date_epoch\"=>1753833600, \"day\"=>{\"maxtemp_c\"=>25.6, \"maxtemp_f\"=>78.1, \"mintemp_c\"=>24.6, \"mintemp_f\"=>76.3, \"avgtemp_c\"=>25.0, \"avgtemp_f\"=>77.0, \"maxwind_mph\"=>14.8, \"maxwind_kph\"=>23.8, \"totalprecip_mm\"=>0.94, \"totalprecip_in\"=>0.04, \"totalsnow_cm\"=>0.0, \"avgvis_km\"=>10.0, \"avgvis_miles\"=>6.0, \"avghumidity\"=>81, \"daily_will_it_rain\"=>1, \"daily_chance_of_rain\"=>89, \"daily_will_it_snow\"=>0, \"daily_chance_of_snow\"=>0, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/day/176.png\", \"code\"=>1063}, \"uv\"=>1.6}, \"astro\"=>{\"sunrise\"=>\"06:41 AM\", \"sunset\"=>\"07:05 PM\", \"moonrise\"=>\"11:07 AM\", \"moonset\"=>\"11:17 PM\", \"moon_phase\"=>\"Waxing Crescent\", \"moon_illumination\"=>27, \"is_moon_up\"=>0, \"is_sun_up\"=>0}, \"hour\"=>[{\"time_epoch\"=>1753830000, \"time\"=>\"2025-07-30 00:00\", \"temp_c\"=>25.0, \"temp_f\"=>77.0, \"is_day\"=>0, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/night/176.png\", \"code\"=>1063}, \"wind_mph\"=>11.2, \"wind_kph\"=>18.0, \"wind_degree\"=>223, \"wind_dir\"=>\"SW\", \"pressure_mb\"=>1016.0, \"pressure_in\"=>30.0, \"precip_mm\"=>0.06, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>85, \"cloud\"=>88, \"feelslike_c\"=>27.4, \"feelslike_f\"=>81.4, \"windchill_c\"=>25.0, \"windchill_f\"=>77.0, \"heatindex_c\"=>27.4, \"heatindex_f\"=>81.4, \"dewpoint_c\"=>22.4, \"dewpoint_f\"=>72.2, \"will_it_rain\"=>1, \"chance_of_rain\"=>100, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>14.6, \"gust_kph\"=>23.5, \"uv\"=>0}, {\"time_epoch\"=>1753833600, \"time\"=>\"2025-07-30 01:00\", \"temp_c\"=>24.9, \"temp_f\"=>76.8, \"is_day\"=>0, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/night/176.png\", \"code\"=>1063}, \"wind_mph\"=>11.0, \"wind_kph\"=>17.6, \"wind_degree\"=>219, \"wind_dir\"=>\"SW\", \"pressure_mb\"=>1016.0, \"pressure_in\"=>29.99, \"precip_mm\"=>0.04, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>85, \"cloud\"=>82, \"feelslike_c\"=>27.2, \"feelslike_f\"=>81.0, \"windchill_c\"=>24.9, \"windchill_f\"=>76.7, \"heatindex_c\"=>27.2, \"heatindex_f\"=>81.0, \"dewpoint_c\"=>22.2, \"dewpoint_f\"=>71.9, \"will_it_rain\"=>1, \"chance_of_rain\"=>86, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>14.7, \"gust_kph\"=>23.7, \"uv\"=>0}, {\"time_epoch\"=>1753837200, \"time\"=>\"2025-07-30 02:00\", \"temp_c\"=>24.8, \"temp_f\"=>76.6, \"is_day\"=>0, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/night/176.png\", \"code\"=>1063}, \"wind_mph\"=>11.2, \"wind_kph\"=>18.0, \"wind_degree\"=>220, \"wind_dir\"=>\"SW\", \"pressure_mb\"=>1015.0, \"pressure_in\"=>29.97, \"precip_mm\"=>0.02, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>85, \"cloud\"=>74, \"feelslike_c\"=>27.0, \"feelslike_f\"=>80.7, \"windchill_c\"=>24.8, \"windchill_f\"=>76.6, \"heatindex_c\"=>27.0, \"heatindex_f\"=>80.7, \"dewpoint_c\"=>22.0, \"dewpoint_f\"=>71.6, \"will_it_rain\"=>1, \"chance_of_rain\"=>78, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>15.3, \"gust_kph\"=>24.6, \"uv\"=>0}, {\"time_epoch\"=>1753840800, \"time\"=>\"2025-07-30 03:00\", \"temp_c\"=>24.6, \"temp_f\"=>76.3, \"is_day\"=>0, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/night/176.png\", \"code\"=>1063}, \"wind_mph\"=>11.4, \"wind_kph\"=>18.4, \"wind_degree\"=>212, \"wind_dir\"=>\"SSW\", \"pressure_mb\"=>1015.0, \"pressure_in\"=>29.96, \"precip_mm\"=>0.02, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>84, \"cloud\"=>78, \"feelslike_c\"=>26.8, \"feelslike_f\"=>80.3, \"windchill_c\"=>24.6, \"windchill_f\"=>76.3, \"heatindex_c\"=>26.8, \"heatindex_f\"=>80.3, \"dewpoint_c\"=>21.8, \"dewpoint_f\"=>71.3, \"will_it_rain\"=>1, \"chance_of_rain\"=>75, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>15.8, \"gust_kph\"=>25.4, \"uv\"=>0}, {\"time_epoch\"=>1753844400, \"time\"=>\"2025-07-30 04:00\", \"temp_c\"=>24.6, \"temp_f\"=>76.3, \"is_day\"=>0, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/night/176.png\", \"code\"=>1063}, \"wind_mph\"=>11.4, \"wind_kph\"=>18.4, \"wind_degree\"=>210, \"wind_dir\"=>\"SSW\", \"pressure_mb\"=>1014.0, \"pressure_in\"=>29.95, \"precip_mm\"=>0.01, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>84, \"cloud\"=>75, \"feelslike_c\"=>26.8, \"feelslike_f\"=>80.3, \"windchill_c\"=>24.6, \"windchill_f\"=>76.4, \"heatindex_c\"=>26.8, \"heatindex_f\"=>80.3, \"dewpoint_c\"=>21.7, \"dewpoint_f\"=>71.1, \"will_it_rain\"=>0, \"chance_of_rain\"=>61, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>15.7, \"gust_kph\"=>25.3, \"uv\"=>0}, {\"time_epoch\"=>1753848000, \"time\"=>\"2025-07-30 05:00\", \"temp_c\"=>24.7, \"temp_f\"=>76.4, \"is_day\"=>0, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/night/176.png\", \"code\"=>1063}, \"wind_mph\"=>10.3, \"wind_kph\"=>16.6, \"wind_degree\"=>208, \"wind_dir\"=>\"SSW\", \"pressure_mb\"=>1014.0, \"pressure_in\"=>29.95, \"precip_mm\"=>0.03, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>83, \"cloud\"=>87, \"feelslike_c\"=>26.8, \"feelslike_f\"=>80.3, \"windchill_c\"=>24.7, \"windchill_f\"=>76.4, \"heatindex_c\"=>26.8, \"heatindex_f\"=>80.3, \"dewpoint_c\"=>21.6, \"dewpoint_f\"=>70.9, \"will_it_rain\"=>1, \"chance_of_rain\"=>88, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>14.1, \"gust_kph\"=>22.8, \"uv\"=>0}, {\"time_epoch\"=>1753851600, \"time\"=>\"2025-07-30 06:00\", \"temp_c\"=>24.7, \"temp_f\"=>76.4, \"is_day\"=>0, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/night/176.png\", \"code\"=>1063}, \"wind_mph\"=>9.4, \"wind_kph\"=>15.1, \"wind_degree\"=>210, \"wind_dir\"=>\"SSW\", \"pressure_mb\"=>1015.0, \"pressure_in\"=>29.96, \"precip_mm\"=>0.02, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>82, \"cloud\"=>83, \"feelslike_c\"=>26.8, \"feelslike_f\"=>80.3, \"windchill_c\"=>24.7, \"windchill_f\"=>76.4, \"heatindex_c\"=>26.8, \"heatindex_f\"=>80.3, \"dewpoint_c\"=>21.5, \"dewpoint_f\"=>70.6, \"will_it_rain\"=>0, \"chance_of_rain\"=>68, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>13.0, \"gust_kph\"=>21.0, \"uv\"=>0}, {\"time_epoch\"=>1753855200, \"time\"=>\"2025-07-30 07:00\", \"temp_c\"=>24.7, \"temp_f\"=>76.4, \"is_day\"=>1, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/day/176.png\", \"code\"=>1063}, \"wind_mph\"=>8.9, \"wind_kph\"=>14.4, \"wind_degree\"=>211, \"wind_dir\"=>\"SSW\", \"pressure_mb\"=>1015.0, \"pressure_in\"=>29.97, \"precip_mm\"=>0.04, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>82, \"cloud\"=>89, \"feelslike_c\"=>26.8, \"feelslike_f\"=>80.2, \"windchill_c\"=>24.7, \"windchill_f\"=>76.4, \"heatindex_c\"=>26.8, \"heatindex_f\"=>80.2, \"dewpoint_c\"=>21.3, \"dewpoint_f\"=>70.4, \"will_it_rain\"=>1, \"chance_of_rain\"=>84, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>12.7, \"gust_kph\"=>20.4, \"uv\"=>0.1}, {\"time_epoch\"=>1753858800, \"time\"=>\"2025-07-30 08:00\", \"temp_c\"=>24.9, \"temp_f\"=>76.8, \"is_day\"=>1, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/day/176.png\", \"code\"=>1063}, \"wind_mph\"=>9.2, \"wind_kph\"=>14.8, \"wind_degree\"=>221, \"wind_dir\"=>\"SW\", \"pressure_mb\"=>1016.0, \"pressure_in\"=>29.99, \"precip_mm\"=>0.03, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>80, \"cloud\"=>76, \"feelslike_c\"=>26.9, \"feelslike_f\"=>80.5, \"windchill_c\"=>24.9, \"windchill_f\"=>76.8, \"heatindex_c\"=>26.9, \"heatindex_f\"=>80.5, \"dewpoint_c\"=>21.3, \"dewpoint_f\"=>70.3, \"will_it_rain\"=>1, \"chance_of_rain\"=>75, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>12.8, \"gust_kph\"=>20.6, \"uv\"=>0.5}, {\"time_epoch\"=>1753862400, \"time\"=>\"2025-07-30 09:00\", \"temp_c\"=>25.2, \"temp_f\"=>77.3, \"is_day\"=>1, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/day/176.png\", \"code\"=>1063}, \"wind_mph\"=>8.5, \"wind_kph\"=>13.7, \"wind_degree\"=>227, \"wind_dir\"=>\"SW\", \"pressure_mb\"=>1016.0, \"pressure_in\"=>30.01, \"precip_mm\"=>0.03, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>79, \"cloud\"=>67, \"feelslike_c\"=>27.2, \"feelslike_f\"=>81.0, \"windchill_c\"=>25.2, \"windchill_f\"=>77.3, \"heatindex_c\"=>27.2, \"heatindex_f\"=>81.0, \"dewpoint_c\"=>21.2, \"dewpoint_f\"=>70.2, \"will_it_rain\"=>1, \"chance_of_rain\"=>84, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>11.6, \"gust_kph\"=>18.7, \"uv\"=>1.6}, {\"time_epoch\"=>1753866000, \"time\"=>\"2025-07-30 10:00\", \"temp_c\"=>24.8, \"temp_f\"=>76.6, \"is_day\"=>1, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/day/176.png\", \"code\"=>1063}, \"wind_mph\"=>8.7, \"wind_kph\"=>14.0, \"wind_degree\"=>238, \"wind_dir\"=>\"WSW\", \"pressure_mb\"=>1017.0, \"pressure_in\"=>30.03, \"precip_mm\"=>0.05, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>81, \"cloud\"=>66, \"feelslike_c\"=>26.9, \"feelslike_f\"=>80.3, \"windchill_c\"=>24.8, \"windchill_f\"=>76.6, \"heatindex_c\"=>26.9, \"heatindex_f\"=>80.3, \"dewpoint_c\"=>21.3, \"dewpoint_f\"=>70.4, \"will_it_rain\"=>1, \"chance_of_rain\"=>72, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>11.6, \"gust_kph\"=>18.6, \"uv\"=>3.3}, {\"time_epoch\"=>1753869600, \"time\"=>\"2025-07-30 11:00\", \"temp_c\"=>25.0, \"temp_f\"=>76.9, \"is_day\"=>1, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/day/176.png\", \"code\"=>1063}, \"wind_mph\"=>9.2, \"wind_kph\"=>14.8, \"wind_degree\"=>228, \"wind_dir\"=>\"SW\", \"pressure_mb\"=>1017.0, \"pressure_in\"=>30.04, \"precip_mm\"=>0.07, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>80, \"cloud\"=>95, \"feelslike_c\"=>27.0, \"feelslike_f\"=>80.7, \"windchill_c\"=>25.0, \"windchill_f\"=>76.9, \"heatindex_c\"=>27.0, \"heatindex_f\"=>80.7, \"dewpoint_c\"=>21.3, \"dewpoint_f\"=>70.3, \"will_it_rain\"=>1, \"chance_of_rain\"=>100, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>12.0, \"gust_kph\"=>19.3, \"uv\"=>5.1}, {\"time_epoch\"=>1753873200, \"time\"=>\"2025-07-30 12:00\", \"temp_c\"=>25.0, \"temp_f\"=>77.0, \"is_day\"=>1, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/day/176.png\", \"code\"=>1063}, \"wind_mph\"=>11.0, \"wind_kph\"=>17.6, \"wind_degree\"=>226, \"wind_dir\"=>\"SW\", \"pressure_mb\"=>1017.0, \"pressure_in\"=>30.03, \"precip_mm\"=>0.02, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>80, \"cloud\"=>98, \"feelslike_c\"=>27.0, \"feelslike_f\"=>80.7, \"windchill_c\"=>25.0, \"windchill_f\"=>77.0, \"heatindex_c\"=>27.0, \"heatindex_f\"=>80.7, \"dewpoint_c\"=>21.2, \"dewpoint_f\"=>70.2, \"will_it_rain\"=>1, \"chance_of_rain\"=>71, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>14.5, \"gust_kph\"=>23.3, \"uv\"=>5.9}, {\"time_epoch\"=>1753876800, \"time\"=>\"2025-07-30 13:00\", \"temp_c\"=>25.2, \"temp_f\"=>77.3, \"is_day\"=>1, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/day/176.png\", \"code\"=>1063}, \"wind_mph\"=>11.4, \"wind_kph\"=>18.4, \"wind_degree\"=>222, \"wind_dir\"=>\"SW\", \"pressure_mb\"=>1016.0, \"pressure_in\"=>30.01, \"precip_mm\"=>0.01, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>79, \"cloud\"=>98, \"feelslike_c\"=>27.2, \"feelslike_f\"=>81.0, \"windchill_c\"=>25.2, \"windchill_f\"=>77.3, \"heatindex_c\"=>27.2, \"heatindex_f\"=>81.0, \"dewpoint_c\"=>21.2, \"dewpoint_f\"=>70.1, \"will_it_rain\"=>1, \"chance_of_rain\"=>82, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>14.7, \"gust_kph\"=>23.6, \"uv\"=>6.1}, {\"time_epoch\"=>1753880400, \"time\"=>\"2025-07-30 14:00\", \"temp_c\"=>25.5, \"temp_f\"=>78.0, \"is_day\"=>1, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/day/176.png\", \"code\"=>1063}, \"wind_mph\"=>11.9, \"wind_kph\"=>19.1, \"wind_degree\"=>222, \"wind_dir\"=>\"SW\", \"pressure_mb\"=>1015.0, \"pressure_in\"=>29.98, \"precip_mm\"=>0.01, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>77, \"cloud\"=>100, \"feelslike_c\"=>27.6, \"feelslike_f\"=>81.7, \"windchill_c\"=>25.5, \"windchill_f\"=>78.0, \"heatindex_c\"=>27.6, \"heatindex_f\"=>81.7, \"dewpoint_c\"=>21.2, \"dewpoint_f\"=>70.1, \"will_it_rain\"=>1, \"chance_of_rain\"=>82, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>14.9, \"gust_kph\"=>24.0, \"uv\"=>5.9}, {\"time_epoch\"=>1753884000, \"time\"=>\"2025-07-30 15:00\", \"temp_c\"=>25.6, \"temp_f\"=>78.1, \"is_day\"=>1, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/day/176.png\", \"code\"=>1063}, \"wind_mph\"=>12.8, \"wind_kph\"=>20.5, \"wind_degree\"=>220, \"wind_dir\"=>\"SW\", \"pressure_mb\"=>1014.0, \"pressure_in\"=>29.95, \"precip_mm\"=>0.02, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>77, \"cloud\"=>96, \"feelslike_c\"=>27.7, \"feelslike_f\"=>81.8, \"windchill_c\"=>25.6, \"windchill_f\"=>78.1, \"heatindex_c\"=>27.7, \"heatindex_f\"=>81.8, \"dewpoint_c\"=>21.2, \"dewpoint_f\"=>70.2, \"will_it_rain\"=>1, \"chance_of_rain\"=>81, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>15.9, \"gust_kph\"=>25.5, \"uv\"=>4.3}, {\"time_epoch\"=>1753887600, \"time\"=>\"2025-07-30 16:00\", \"temp_c\"=>25.4, \"temp_f\"=>77.7, \"is_day\"=>1, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/day/176.png\", \"code\"=>1063}, \"wind_mph\"=>14.1, \"wind_kph\"=>22.7, \"wind_degree\"=>223, \"wind_dir\"=>\"SW\", \"pressure_mb\"=>1014.0, \"pressure_in\"=>29.93, \"precip_mm\"=>0.02, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>78, \"cloud\"=>94, \"feelslike_c\"=>27.5, \"feelslike_f\"=>81.5, \"windchill_c\"=>25.4, \"windchill_f\"=>77.7, \"heatindex_c\"=>27.5, \"heatindex_f\"=>81.5, \"dewpoint_c\"=>21.3, \"dewpoint_f\"=>70.3, \"will_it_rain\"=>1, \"chance_of_rain\"=>87, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>17.5, \"gust_kph\"=>28.1, \"uv\"=>3.2}, {\"time_epoch\"=>1753891200, \"time\"=>\"2025-07-30 17:00\", \"temp_c\"=>25.2, \"temp_f\"=>77.4, \"is_day\"=>1, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/day/176.png\", \"code\"=>1063}, \"wind_mph\"=>14.1, \"wind_kph\"=>22.7, \"wind_degree\"=>225, \"wind_dir\"=>\"SW\", \"pressure_mb\"=>1014.0, \"pressure_in\"=>29.93, \"precip_mm\"=>0.04, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>79, \"cloud\"=>99, \"feelslike_c\"=>27.3, \"feelslike_f\"=>81.2, \"windchill_c\"=>25.2, \"windchill_f\"=>77.4, \"heatindex_c\"=>27.3, \"heatindex_f\"=>81.2, \"dewpoint_c\"=>21.3, \"dewpoint_f\"=>70.3, \"will_it_rain\"=>1, \"chance_of_rain\"=>72, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>17.9, \"gust_kph\"=>28.8, \"uv\"=>1.2}, {\"time_epoch\"=>1753894800, \"time\"=>\"2025-07-30 18:00\", \"temp_c\"=>25.1, \"temp_f\"=>77.3, \"is_day\"=>1, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/day/176.png\", \"code\"=>1063}, \"wind_mph\"=>14.3, \"wind_kph\"=>23.0, \"wind_degree\"=>228, \"wind_dir\"=>\"SW\", \"pressure_mb\"=>1014.0, \"pressure_in\"=>29.93, \"precip_mm\"=>0.04, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>79, \"cloud\"=>91, \"feelslike_c\"=>27.2, \"feelslike_f\"=>81.0, \"windchill_c\"=>25.2, \"windchill_f\"=>77.3, \"heatindex_c\"=>27.2, \"heatindex_f\"=>81.0, \"dewpoint_c\"=>21.3, \"dewpoint_f\"=>70.3, \"will_it_rain\"=>1, \"chance_of_rain\"=>78, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>18.5, \"gust_kph\"=>29.8, \"uv\"=>0.3}, {\"time_epoch\"=>1753898400, \"time\"=>\"2025-07-30 19:00\", \"temp_c\"=>25.2, \"temp_f\"=>77.3, \"is_day\"=>1, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/day/176.png\", \"code\"=>1063}, \"wind_mph\"=>14.8, \"wind_kph\"=>23.8, \"wind_degree\"=>229, \"wind_dir\"=>\"SW\", \"pressure_mb\"=>1014.0, \"pressure_in\"=>29.94, \"precip_mm\"=>0.07, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>81, \"cloud\"=>89, \"feelslike_c\"=>27.4, \"feelslike_f\"=>81.3, \"windchill_c\"=>25.2, \"windchill_f\"=>77.3, \"heatindex_c\"=>27.4, \"heatindex_f\"=>81.3, \"dewpoint_c\"=>21.7, \"dewpoint_f\"=>71.0, \"will_it_rain\"=>1, \"chance_of_rain\"=>100, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>18.9, \"gust_kph\"=>30.5, \"uv\"=>0.0}, {\"time_epoch\"=>1753902000, \"time\"=>\"2025-07-30 20:00\", \"temp_c\"=>26.4, \"temp_f\"=>79.5, \"is_day\"=>0, \"condition\"=>{\"text\"=>\"Partly cloudy\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/night/116.png\", \"code\"=>1003}, \"wind_mph\"=>13.6, \"wind_kph\"=>22.0, \"wind_degree\"=>227, \"wind_dir\"=>\"SW\", \"pressure_mb\"=>1015.0, \"pressure_in\"=>29.97, \"precip_mm\"=>0.09, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>84, \"cloud\"=>50, \"feelslike_c\"=>27.4, \"feelslike_f\"=>81.3, \"windchill_c\"=>25.2, \"windchill_f\"=>77.3, \"heatindex_c\"=>27.4, \"heatindex_f\"=>81.3, \"dewpoint_c\"=>21.8, \"dewpoint_f\"=>71.2, \"will_it_rain\"=>1, \"chance_of_rain\"=>100, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>17.7, \"gust_kph\"=>28.5, \"uv\"=>0}, {\"time_epoch\"=>1753905600, \"time\"=>\"2025-07-30 21:00\", \"temp_c\"=>25.2, \"temp_f\"=>77.4, \"is_day\"=>0, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/night/176.png\", \"code\"=>1063}, \"wind_mph\"=>13.4, \"wind_kph\"=>21.6, \"wind_degree\"=>225, \"wind_dir\"=>\"SW\", \"pressure_mb\"=>1016.0, \"pressure_in\"=>30.01, \"precip_mm\"=>0.12, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>82, \"cloud\"=>75, \"feelslike_c\"=>27.5, \"feelslike_f\"=>81.5, \"windchill_c\"=>25.2, \"windchill_f\"=>77.4, \"heatindex_c\"=>27.5, \"heatindex_f\"=>81.5, \"dewpoint_c\"=>21.9, \"dewpoint_f\"=>71.5, \"will_it_rain\"=>1, \"chance_of_rain\"=>100, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>17.6, \"gust_kph\"=>28.3, \"uv\"=>0}, {\"time_epoch\"=>1753909200, \"time\"=>\"2025-07-30 22:00\", \"temp_c\"=>25.2, \"temp_f\"=>77.4, \"is_day\"=>0, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/night/176.png\", \"code\"=>1063}, \"wind_mph\"=>13.9, \"wind_kph\"=>22.3, \"wind_degree\"=>228, \"wind_dir\"=>\"SW\", \"pressure_mb\"=>1017.0, \"pressure_in\"=>30.02, \"precip_mm\"=>0.06, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>83, \"cloud\"=>61, \"feelslike_c\"=>27.6, \"feelslike_f\"=>81.6, \"windchill_c\"=>25.2, \"windchill_f\"=>77.4, \"heatindex_c\"=>27.6, \"heatindex_f\"=>81.6, \"dewpoint_c\"=>22.1, \"dewpoint_f\"=>71.8, \"will_it_rain\"=>1, \"chance_of_rain\"=>100, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>18.0, \"gust_kph\"=>29.0, \"uv\"=>0}, {\"time_epoch\"=>1753912800, \"time\"=>\"2025-07-30 23:00\", \"temp_c\"=>25.0, \"temp_f\"=>77.1, \"is_day\"=>0, \"condition\"=>{\"text\"=>\"Patchy rain nearby\", \"icon\"=>\"//cdn.weatherapi.com/weather/64x64/night/176.png\", \"code\"=>1063}, \"wind_mph\"=>14.1, \"wind_kph\"=>22.7, \"wind_degree\"=>230, \"wind_dir\"=>\"SW\", \"pressure_mb\"=>1017.0, \"pressure_in\"=>30.03, \"precip_mm\"=>0.04, \"precip_in\"=>0.0, \"snow_cm\"=>0.0, \"humidity\"=>83, \"cloud\"=>57, \"feelslike_c\"=>27.3, \"feelslike_f\"=>81.2, \"windchill_c\"=>25.0, \"windchill_f\"=>77.1, \"heatindex_c\"=>27.3, \"heatindex_f\"=>81.2, \"dewpoint_c\"=>22.0, \"dewpoint_f\"=>71.6, \"will_it_rain\"=>0, \"chance_of_rain\"=>62, \"will_it_snow\"=>0, \"chance_of_snow\"=>0, \"vis_km\"=>10.0, \"vis_miles\"=>6.0, \"gust_mph\"=>18.8, \"gust_kph\"=>30.3, \"uv\"=>0}]}]}}"], ["created_at", "2025-07-30 19:04:19.107808"], ["updated_at", "2025-07-30 19:04:19.107808"]]
+  ↳ app/models/concerns/weather_concern.rb:8:in `create'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/concerns/weather_concern.rb:8:in `create'
+Completed 200 OK in 1205ms (Views: 63.5ms | ActiveRecord: 68.2ms (2 queries, 0 cached) | GC: 19.9ms)
+
+
+Started POST "/api/v1/weathers/search" for 192.168.65.1 at 2025-07-30 19:08:00 +0000
+Processing by Api::V1::WeathersController#search as */*
+  Parameters: {"address"=>{"line"=>"", "city"=>"", "state"=>"", "zip_code"=>"L", "country"=>""}, "weather"=>{}}
+Completed 200 OK in 437ms (Views: 15.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 5.4ms)
+
+
+Started POST "/api/v1/weathers/search" for 192.168.65.1 at 2025-07-30 19:13:28 +0000
+Processing by Api::V1::WeathersController#search as */*
+  Parameters: {"address"=>{"line"=>"", "city"=>"", "state"=>"", "zip_code"=>"L", "country"=>""}, "weather"=>{}}
+Completed 200 OK in 148ms (Views: 56.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/weathers/search" for 192.168.65.1 at 2025-07-30 19:13:55 +0000
+Processing by Api::V1::WeathersController#search as */*
+  Parameters: {"address"=>{"line"=>"", "city"=>"", "state"=>"", "zip_code"=>"L1J 7S2", "country"=>""}, "weather"=>{}}
+  [1m[36mWeather Load (8.9ms)[0m  [1m[34mSELECT "weathers".* FROM "weathers" WHERE "weathers"."zip_code" = $1 AND "weathers"."day" = $2 LIMIT $3[0m  [["zip_code", "L1J 7S2"], ["day", "2025-07-30"], ["LIMIT", 1]]
+  ↳ app/services/weather_service/finder.rb:21:in `fetch_db'
+Completed 200 OK in 273ms (Views: 2.1ms | ActiveRecord: 52.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/weathers/search" for 192.168.65.1 at 2025-07-30 19:17:10 +0000
+Processing by Api::V1::WeathersController#search as */*
+  Parameters: {"address"=>{"line"=>"", "city"=>"", "state"=>"", "zip_code"=>"L", "country"=>""}, "weather"=>{}}
+Completed 200 OK in 101ms (Views: 22.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/weathers/search" for 192.168.65.1 at 2025-07-30 20:27:54 +0000
+Processing by Api::V1::WeathersController#search as */*
+  Parameters: {"address"=>{"line"=>"", "city"=>"", "state"=>"", "zip_code"=>"L", "country"=>""}, "weather"=>{}}
+  [1m[36mWeather Load (6.8ms)[0m  [1m[34mSELECT "weathers".* FROM "weathers" WHERE "weathers"."zip_code" = $1 AND "weathers"."day" = $2 LIMIT $3[0m  [["zip_code", "L"], ["day", "2025-07-30"], ["LIMIT", 1]]
+  ↳ app/services/weather_service/finder.rb:21:in `fetch_db'
+Completed 200 OK in 473ms (Views: 23.0ms | ActiveRecord: 62.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/weathers/search" for 192.168.65.1 at 2025-07-30 20:30:05 +0000
+Processing by Api::V1::WeathersController#search as */*
+  Parameters: {"address"=>{"line"=>"", "city"=>"", "state"=>"", "zip_code"=>"L1J 7S2", "country"=>""}, "weather"=>{}}
+  [1m[36mWeather Load (40.7ms)[0m  [1m[34mSELECT "weathers".* FROM "weathers" WHERE "weathers"."zip_code" = $1 AND "weathers"."day" = $2 LIMIT $3[0m  [["zip_code", "L1J 7S2"], ["day", "2025-07-30"], ["LIMIT", 1]]
+  ↳ app/services/weather_service/finder.rb:21:in `fetch_db'
+Completed 200 OK in 174ms (Views: 17.7ms | ActiveRecord: 40.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/weathers/search" for 192.168.65.1 at 2025-07-30 20:38:31 +0000
+Started POST "/api/v1/weathers/search" for 192.168.65.1 at 2025-07-30 20:38:34 +0000
+Processing by Api::V1::WeathersController#search as */*
+  Parameters: {"address"=>{"line"=>"", "city"=>"", "state"=>"", "zip_code"=>"L", "country"=>""}, "weather"=>{}}
+Processing by Api::V1::WeathersController#search as */*
+  Parameters: {"address"=>{"line"=>"", "city"=>"", "state"=>"", "zip_code"=>"L", "country"=>""}, "weather"=>{}}
+Completed 200 OK in 109ms (Views: 93.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 88.9ms)
+
+
+Completed 200 OK in 144ms (Views: 1.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 88.9ms)
+
+
+Started POST "/api/v1/weathers/search" for 192.168.65.1 at 2025-07-30 20:39:15 +0000
+Processing by Api::V1::WeathersController#search as */*
+  Parameters: {"address"=>{"line"=>"", "city"=>"", "state"=>"", "zip_code"=>"", "country"=>""}, "weather"=>{}}
+Completed 400 Bad Request in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/weathers/search" for 192.168.65.1 at 2025-07-30 20:39:18 +0000
+Processing by Api::V1::WeathersController#search as */*
+  Parameters: {"address"=>{"line"=>"", "city"=>"", "state"=>"", "zip_code"=>"", "country"=>""}, "weather"=>{}}
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/weathers/search" for 192.168.65.1 at 2025-07-30 20:40:29 +0000
+Processing by Api::V1::WeathersController#search as */*
+  Parameters: {"address"=>{"line"=>"", "city"=>"", "state"=>"", "zip_code"=>"", "country"=>""}, "weather"=>{}}
+Completed 400 Bad Request in 12ms (Views: 3.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/weathers/search" for 192.168.65.1 at 2025-07-30 20:40:42 +0000
+Processing by Api::V1::WeathersController#search as */*
+  Parameters: {"address"=>{"line"=>"", "city"=>"", "state"=>"", "zip_code"=>"L", "country"=>""}, "weather"=>{}}
+Completed 200 OK in 83ms (Views: 45.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 20.1ms)
+
+

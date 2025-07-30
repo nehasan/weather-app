@@ -1,11 +1,13 @@
 class Api::V1::WeathersController < ApplicationController
   before_action :authenticate_user
 
+  # [GET] /
   def index
     forecasts = Weather.all
     render json: { data: forecasts }, status: 200
   end
 
+  # [POST] /search
   def search
     permitted = weather_params
 

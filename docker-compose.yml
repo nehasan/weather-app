@@ -46,3 +46,21 @@ services:
         condition: service_started
     networks:
       - weather-app
+  
+  weather-ui:
+    container_name: weather-ui
+    build: ./weather-ui
+    volumes:
+      - ./weather-ui:/app
+    ports:
+      - "3001:3000"
+    working_dir: /app
+    entrypoint: 
+      - ./entrypoint.sh
+    environment:
+      - NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
+    depends_on:
+      weather-api:
+        condition: service_started
+    networks:
+      - weather-app

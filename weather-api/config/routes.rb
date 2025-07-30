@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :weathers do
         collection do
-          get '/search', to: 'weathers#search'
+          post '/search', to: 'weathers#search'
         end
       end
     end
