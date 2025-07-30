@@ -31,6 +31,10 @@ Built with Ruby on Rails API only
 > docker compose up -d
 ```
 
+## Open the UI
+
+- Once the Next.js server is up and running visit http://localhost:3001/weathers/search
+
 ### Some useful commands to maintain local bundle (Ignore)
 
 ```
