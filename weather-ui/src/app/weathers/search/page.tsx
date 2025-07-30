@@ -20,7 +20,6 @@ export default function Search({ }) {
   const [weatherData, setWeatherData] = useState<undefined>(undefined);
 
   const handleChangeInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(event.target);
     setAddress({
       ...address,
       [event.target.name]: event.target.value

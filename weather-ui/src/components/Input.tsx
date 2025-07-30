@@ -1,7 +1,5 @@
 'use client'
 
-import { ChangeEventHandler } from "react";
-
 type InputProps = {
   name: string;
   value: string;
