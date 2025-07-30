@@ -11,7 +11,7 @@ class Api::V1::WeatherController < ApplicationController
 
     unless permitted[:zip_code].present?
       render json: {
-        error: 'zip_code value is required'
+        error: "zip_code value is required"
       }, status: 400
       return
     end
