@@ -18,7 +18,10 @@ module WeatherService
 
     # Fetches the forecast from db
     def self.fetch_db(params)
-      forecast = Weather.find_by_zip_code(params[:zip_code])
+      forecast = Weather.find_by({
+        zip_code: params[:zip_code],
+        day: Date.today
+      })
       return unless forecast
 
       # Now add it to the cache store for next half n hour availability
